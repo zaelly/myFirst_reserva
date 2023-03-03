@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="asset/script.js"></script>
+    <style>
+        body {
+            background-color: rgb(38, 38, 38);
+            text-align: center;
+            margin-top: 130px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .central {
+            justify-content: center;
+            align-items: center;
+            height: 100;
+            display: block;
+        }
+
+        input[type=email],
+        input[type=password],
+        input[type=number],
+        input[type=date],
+        input[type=text] {
+            width: 240px;
+            margin: 8px;
+            padding: 12px;
+            background: NONE;
+            border: 3px solid #303030;
+            border-radius: 15px;
+            color: #ffffff;
+            outline: none;
+            font-size: 15px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 15px;
+            width: 150px;
+            font-weight: 900;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            border: 2px solid #9a9a9a;
+            background-color: #303030;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+
+        .checkbox {
+            color: #ffffff;
+            display: left;
+        }
+
+        .link {
+            color: #ffff;
+        }
+
+        .psc {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffff;
+            color: rgb(133, 133, 133);
+            margin-top: 10px;
+
+        }
+
+        .col1 {
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .olho {
+            cursor: pointer;
+            margin: 23px -40px;
+            position: absolute;
+            width: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="title">
+        <p>Sign Up</p>
+    </div>
+    <div>
+        <!-- mandar a action pra algum lugar pq aqui ela ta mandando pra ela mesma -->
+        <form action="confg.php" method="POST">
+            <div class="central">
+                <label>
+                    <input id="email" type="email" name="email" placeholder="Email" required />
+                </label>
+            </div>
+            <div class="central">
+                <label>
+                    <input id="Username" type="text" name="user" placeholder="Usuário" required />
+                </label>
+            </div>
+            <div class="central">
+                <input id="password" type="password" name="senha" placeholder="Senha" required />
+                <img src="asset/Imagem-Olho-PNG.png" onclick="mouseoverPass();" onmouseout="mouseoutPass();" id="olho" class="olho" />
+            </div>
+            <div class="checkbox psc col1">
+                <input type="checkbox" onclick="checkbotao()" id="checkbox" checked />
+                <label for="check"> Lembrar </label>
+            </div>
+
+            <div class="psc link">
+                <p>Ja é cadastrado?<a href="login.html" class="link"> Clique aqui!</a></p>
+            </div>
+
+            <div class="button">
+                <button type="submit" name="submit" value="submit" id="button">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
